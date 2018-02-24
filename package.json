@@ -1,0 +1,31 @@
+{
+  "name": "repostpolice",
+  "version": "1.0.0",
+  "description": "Bot for identifying and calling out image reposts",
+  "main": "Index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seythi/RepostPolice.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "image"
+  ],
+  "author": "Seythi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seythi/RepostPolice/issues"
+  },
+  "homepage": "https://github.com/seythi/RepostPolice#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "bunyan": "^1.8.12",
+    "discordie": "^0.11.0",
+    "image-hash": "^1.0.7",
+    "nconf": "^0.10.0"
+  }
+}

@@ -1,0 +1,9 @@
+https://www.npmjs.com/package/image-hash
+
+http://qeled.github.io/discordie/#/docs/GettingStarted.md?_k=fjlzgg
+
+https://github.com/Gravebot/Gravebot/blob/master/src/discord.js
+
+https://github.com/indexzero/nconf
+
+http://ramdajs.com/docs/#__

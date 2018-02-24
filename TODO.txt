@@ -1,0 +1,10 @@
+BOT
+NoSQL
+
+call out reposts
+	count reposts per image
+		time and poster of first post
+	count reposts per person
+	allow exceptions
+ban specific hashes
+programmable text commands
