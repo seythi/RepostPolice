@@ -1,0 +1,32 @@
+GUILD
+	ID pk
+	NAME 
+
+USER
+	ID pk
+	REPOSTS
+
+IMAGE
+	HASH pk
+	gReposts
+	gUser FK
+	gFirsttime
+
+COMMANDS
+	guildID FK
+	command
+	response
+
+XREFGUILDIMAGE
+	guildID fk
+	HASH fk
+	Reposts
+	User
+	Firsttime
+	exempt
+	banned
+
+XREFGUILDUSER
+	guildID fk
+	userID FK
+	userReposts

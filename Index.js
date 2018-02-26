@@ -1,7 +1,8 @@
 require('./src/initconfig');
 const nconf = require('nconf');
 const Discordie = require('Discordie');
-const Hasher = require('image-hash');
+var tlog = require('./src/util').tlog
+const reposto = require('./src/reposto')
 var client = new Discordie()
 
 
@@ -21,7 +22,7 @@ if(e.message.author.bot) return;
     e.message.channel.sendMessage("pong");
 else
 {
-	//e.message.channel.sendMessage('```' + e.message.content + '```')
+	//contains image
 	let atchlinks = [];
 	let imglinks = []
 	for(let i in e.message.attachments)
@@ -29,15 +30,19 @@ else
 		atchlinks.push(e.message.attachments[i].url)
 	}
 	let msglinks = e.message.content.match(generateFileRegex())
-	imglinks = atchlinks.concat(msglinks)
-	console.log(generateFileRegex().toString())
-	console.log('atch')
-	console.log(atchlinks)
-	console.log('msg')
-	console.log(msglinks)
-	console.log('img')
-	console.log(imglinks)
-
+	imglinks = (atchlinks||[]).concat(msglinks||[])
+	tlog(6, generateFileRegex().toString())
+	tlog(6,'atch')
+	tlog(6, atchlinks)
+	tlog(6,'msg')
+	tlog(6, msglinks)
+	tlog(6, 'img')
+	tlog(6, imglinks)
+	if(imglinks && imglinks.length > 0)
+	{
+		reposto.repostForensics(e, imglinks)
+	}
+	//end contains image
 }
 });
 
